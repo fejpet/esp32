@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"freertos.h": "c",
+			"task.h": "c",
+			"gpio.h": "c",
+			"portable.h": "c"
+		},
+		"terminal.integrated.profiles.windows": {
+			"ESP build (powershell)": {
+				"path": "pwsh.exe",
+				"args": [
+"-NoExit", "-File", "C:/Esp/Initialize-Idf.ps1", "-IdfId", "esp-idf-18071852bf9ae6e9d0b25ec363eb975c"
+				]
+			},
+			"PowerShell": {
+				"source": "PowerShell",
+				"icon": "terminal-powershell"
+			},
+			"Command Prompt": {
+				"path": [
+					"${env:windir}\\Sysnative\\cmd.exe",
+					"${env:windir}\\System32\\cmd.exe"
+				],
+				"args": [],
+				"icon": "terminal-cmd"
+			},
+			"Git Bash": {
+				"source": "Git Bash"
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "ESP build (powershell)"
+	}
+}
