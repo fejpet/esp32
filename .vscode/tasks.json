@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "preRun",
+			"windows":{
+				"command": "pwsh.exe -NoExit -File C:/Esp/Initialize-Idf.ps1  & clear & start openocd -f board/esp32-wrover-kit-3.3v.cfg & exit"
+			}
+
+		}
+	]
+}

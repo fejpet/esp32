@@ -1,0 +1,23 @@
+{
+    // IntelliSense használata a lehetséges attribútumok listázásához
+    // Húzza fölé az egeret a létező attribútumok leírásának megtekintéséhez!
+    // További információért látogassa meg a következőt: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            //"preLaunchTask": "preRun",
+            "name":"ESP32 OpenOCD",
+            "type":"cppdbg",
+            "request":"launch",
+            "cwd":"${workspaceFolder}/gpioexample/build",
+            "program": "${workspaceFolder}/gpioexample/build/gpioexample.elf",
+            "miDebuggerPath": "C:/Esp/tools/xtensa-esp-elf-gdb/14.2_20240403/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gdb.exe",
+            "setupCommands": [
+                {"text": "target remote 127.0.0.1:3333"},
+                {"text": "set remote hardware-watchpoint-limit 2"},
+                {"text": "monitor reset halt"},
+                {"text": "flushregs"}
+            ]
+        }
+    ]
+}

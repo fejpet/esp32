@@ -5,6 +5,7 @@
 
 void app_main(void)
 {
+    printf("Starting....");
     gpio_set_direction(GPIO_NUM_22, GPIO_MODE_INPUT);
     gpio_set_pull_mode(GPIO_NUM_22, GPIO_PULLUP_ONLY);
 
@@ -15,10 +16,12 @@ void app_main(void)
         if (relayOn)
         {
             gpio_set_level(GPIO_NUM_21, 0);
+            printf("Turn off");
         }
         else
         {
             gpio_set_level(GPIO_NUM_21, 1);
+            printf("Turn on");
         }
         relayOn = !relayOn;
 
